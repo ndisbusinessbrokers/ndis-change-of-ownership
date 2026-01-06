@@ -1,0 +1,1147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Change of Ownership Process for NDIS: A Simple Guide (Australia)</title>
+  <meta name="description" content="Simple guide to the change of ownership process for NDIS in Australia. Learn share sale vs asset sale,and transferring insurance when selling an NDIS business." />  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+
+    :root{
+      --navy:#173a56;
+      --navy-2:#0f2b42;
+      --sand:#e9ddcf;
+      --paper:#f6efe7;
+      --card:#ffffffd9;
+      --border:#d8c9b8;
+      --text:#1f1f1f;
+      --muted:#6b6b6b;
+      --accent:#e7b44b;
+      --accent-2:#c8902f;
+      --shadow: 0 18px 40px rgba(0,0,0,.12);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Kumbh Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 15% 10%, rgba(255,255,255,.45), transparent 55%),
+        radial-gradient(800px 500px at 90% 20%, rgba(255,255,255,.25), transparent 55%),
+        linear-gradient(180deg, #efe3d6 0%, #efe1d3 30%, #eadbcc 100%);
+    }
+    /* Top Nav */
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+    .nav__inner{
+      max-width:1200px;
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+    .brand{
+      color:#fff;
+      font-weight:800;
+      letter-spacing:.2px;
+      text-decoration:none;
+      font-size:15px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      max-width:480px;
+    }
+    .nav__links{margin-left:auto;display:flex;gap:14px;align-items:center}
+    .nav__links a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+      opacity:.92;
+      padding:10px 10px;
+      border-radius:10px;
+    }
+    .nav__links a:hover{background:rgba(255,255,255,.10);opacity:1}
+    .nav__btn{
+      display:none;
+      margin-left:auto;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.20);
+      color:#fff;
+      border-radius:12px;
+      padding:10px 12px;
+      font-weight:800;
+      cursor:pointer;
+    }
+    /* Dropdown */
+    .dropdown{position:relative}
+    .dropdown > a::after{content:"▾";margin-left:6px;font-size:12px;opacity:.9}
+    .dropdown__menu{
+      position:absolute;
+      right:0;
+      top:44px;
+      min-width:260px;
+      background:#fff;
+      border:1px solid rgba(0,0,0,.08);
+      border-radius:14px;
+      box-shadow: var(--shadow);
+      padding:8px;
+      display:none;
+    }
+    .dropdown__menu a{
+      display:block;
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:12px;
+      font-weight:700;
+      font-size:14px;
+    }
+    .dropdown__menu a:hover{background:rgba(23,58,86,.08)}
+    .dropdown.open .dropdown__menu{display:block}
+
+    /* Hero */
+    .hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("/img/ndis-change-of-ownership-hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* Dark overlay for readability */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.55)
+  );
+  z-index: 2;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+    .hero__title{
+      margin:0;
+      color:#fff;
+      font-size: clamp(30px, 4vw, 62px);
+      line-height:1.02;
+      letter-spacing:-.6px;
+      font-weight:900;
+      text-shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    .hero__title .accent{color:var(--accent)}
+    .hero__meta{
+      color:rgba(255,255,255,.9);
+      font-size:14px;
+      margin-top:12px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 10px;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.10);
+      border-radius:999px;
+    }
+
+    /* Main Layout */
+    .wrap{max-width:1200px;margin:0 auto;padding:0 18px}
+    .card{
+      background:var(--card);
+      border:1px solid rgba(0,0,0,.06);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      backdrop-filter: blur(6px);
+    }
+    .card__body{padding:18px}
+    .card__title{
+      margin:0 0 10px;
+      font-weight:900;
+      letter-spacing:-.2px;
+      font-size:16px;
+      color:var(--navy);
+    }
+
+    /* TOC (boxed inside article) */
+    .toc a{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:12px;
+      color:var(--text);
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+    }
+    .toc a:hover{background:rgba(23,58,86,.07)}
+    .toc a.active{background:rgba(231,180,75,.22); border:1px solid rgba(231,180,75,.45)}
+    .arrow{opacity:.55}
+
+    /* Blog grid */
+    .grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:18px;
+      align-items:start;
+    }
+    .article .card__body{padding:24px}
+    .kicker{
+      font-weight:900;
+      font-size:12px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:rgba(23,58,86,.75);
+    }
+    h2{
+      margin:16px 0 10px;
+      font-size:28px;
+      letter-spacing:-.5px;
+      color:var(--navy);
+    }
+    h3{
+      margin:22px 0 10px;
+      font-size:20px;
+      letter-spacing:-.35px;
+      color:var(--navy);
+    }
+    p{margin:0 0 14px; color:#2a2a2a; line-height:1.75}
+    ul{margin:10px 0 14px 18px; line-height:1.7}
+    .lead{font-size:16px; color: #3a3a3a}
+    .quote{
+      margin:18px 0;
+      padding:18px 18px;
+      border-radius:16px;
+      background:linear-gradient(180deg, rgba(255,255,255,.80) 0%, rgba(255,255,255,.65) 100%);
+      border:1px solid rgba(0,0,0,.06);
+      position:relative;
+    }
+    .quote::before{
+      content:"“";
+      position:absolute;
+      left:14px;
+      top:-8px;
+      font-size:54px;
+      color:rgba(23,58,86,.25);
+      font-weight:900;
+    }
+    .callouts{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin:18px 0 6px;
+    }
+    .callout{
+      border-radius:16px;
+      border:1px solid rgba(0,0,0,.06);
+      background:rgba(255,255,255,.65);
+      padding:14px 14px;
+    }
+    .callout h4{margin:0 0 6px;font-size:14px;color:var(--navy);letter-spacing:-.2px}
+    .callout ul{margin:0 0 0 18px}
+    .callout li{margin:6px 0}
+
+
+    /* Tables (for comparisons/checklists inside article) */
+    table.data{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      overflow:hidden;
+      border-radius:14px;
+      border:1px solid rgba(0,0,0,.08);
+      background:rgba(255,255,255,.72);
+    }
+    table.data th, table.data td{
+      padding:12px 12px;
+      text-align:left;
+      vertical-align:top;
+      border-bottom:1px solid rgba(0,0,0,.06);
+      font-size:14px;
+      line-height:1.55;
+    }
+    table.data thead th{
+      background:rgba(23,58,86,.06);
+      color:var(--navy);
+      font-weight:900;
+    }
+    table.data tr:last-child td{border-bottom:0}
+
+    /* Images inside article */
+    figure{margin:18px 0}
+    figure img{width:100%; border-radius:16px; display:block}
+    figure figcaption{margin-top:10px; color:var(--muted); font-weight:700}
+
+    /* Sidebar blocks */
+    .sidebar{position:sticky; top:84px}
+    .takeaways li{margin:10px 0}
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 12px;border-radius:14px;
+      border:1px solid rgba(0,0,0,.06);
+      background:rgba(255,255,255,.7);
+      font-weight:800;
+      color:var(--navy);
+    }
+    .related a{
+      display:block;
+      padding:10px 12px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:800;
+      color:var(--text);
+      border:1px solid rgba(0,0,0,.06);
+      background:rgba(255,255,255,.65);
+      margin-top:10px;
+    }
+    .related a:hover{background:rgba(231,180,75,.20)}
+    .cta{
+      margin-top:12px;
+      padding:14px;
+      border-radius:16px;
+      background:linear-gradient(180deg, rgba(23,58,86,.08) 0%, rgba(23,58,86,.05) 100%);
+      border:1px dashed rgba(23,58,86,.25);
+    }
+    .cta a{
+      display:inline-block;
+      margin-top:10px;
+      background: var(--accent);
+      color:#1a1a1a;
+      text-decoration:none;
+      font-weight:900;
+      padding:12px 14px;
+      border-radius:14px;
+      box-shadow: 0 10px 22px rgba(0,0,0,.12);
+    }
+    .cta a:hover{background:#f2c45f}
+
+    /* Boxed TOC card helper */
+    .toc-card{max-width:520px}
+    .toc-card .card__body{padding:16px}
+    .toc-card .card__title{margin-bottom:6px}
+
+    /* Section anchors spacing */
+    .section{scroll-margin-top:96px}
+
+    /* Form */
+    .form{
+      display:grid; gap:12px;
+      margin-top:12px;
+    }
+    .form label{font-weight:800; color:var(--navy); font-size:13px}
+    .form input, .form textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(0,0,0,.14);
+      background:rgba(255,255,255,.75);
+      font:inherit;
+      outline:none;
+    }
+    .form textarea{min-height:140px; resize:vertical}
+    .form button{
+      justify-self:start;
+      background:var(--accent);
+      border:0;
+      border-radius:14px;
+      padding:12px 14px;
+      font-weight:900;
+      cursor:pointer;
+    }
+    .form button:hover{background:#f2c45f}
+
+    /* Footer */
+    footer{
+      margin-top:24px;
+      background:#0d0d0d;
+      color:#fff;
+    }
+    footer .foot{
+      max-width:1200px;
+      margin:0 auto;
+      padding:22px 18px;
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+    }
+    footer a{color:#fff;text-decoration:underline;font-weight:800;opacity:.92}
+    .social{display:flex;gap:10px;align-items:center}
+    .icon{
+      width:42px;height:42px;border-radius:999px;
+      display:inline-flex;align-items:center;justify-content:center;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.08);
+      text-decoration:none;color:#fff;font-weight:900;
+    }
+    .icon:hover{background:rgba(231,180,75,.25)}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero__inner{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .sidebar{position:relative; top:auto}
+      .nav__links{display:none}
+      .nav__btn{display:inline-flex}
+      .nav.open .nav__links{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        margin-left:0;
+        padding:12px 0 0;
+        gap:6px;
+      }
+      .brand{max-width:100%}
+      .callouts{grid-template-columns:1fr}
+      .dropdown__menu{position:static; box-shadow:none; border-radius:14px; margin-top:8px}
+      .toc-card{max-width:100%}
+    }
+
+    .location-map {
+  width: 100%;
+  margin: 60px 0;
+}
+
+.location-map iframe {
+  width: 100%;
+  display: block;
+}
+
+  </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://ndisbusiness-change-ownership.s3.eu-north-1.amazonaws.com/#website",
+      "url": "https://ndisbusiness-change-ownership.s3.eu-north-1.amazonaws.com/",
+      "name": "NDISBusinessBrokers",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://ndisbusiness-change-ownership.s3.eu-north-1.amazonaws.com/#organization",
+      "name": "NDISBusinessBrokers",
+      "url": "https://ndisbusiness-change-ownership.s3.eu-north-1.amazonaws.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ndisbusiness-change-ownership.s3.eu-north-1.amazonaws.com/images/logo.png"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://ndisbusiness-change-ownership.s3.eu-north-1.amazonaws.com/change-of-ownership-process-for-ndis/#webpage",
+      "url": "https://ndisbusiness-change-ownership.s3.eu-north-1.amazonaws.com/change-of-ownership-process-for-ndis/",
+      "name": "Change of Ownership Process for NDIS: A Simple Guide for Buyers & Sellers",
+      "description": "Simple guide to the change of ownership process for NDIS in Australia: share sale vs asset sale, transfer NDIS provider steps, timelines, transferring insurance when selling an NDIS business, Tasmania notes, and FAQs.",
+      "isPartOf": {
+        "@id": "https://ndisbusiness-change-ownership.s3.eu-north-1.amazonaws.com/#website"
+      },
+      "about": [
+        "change of ownership process",
+        "selling ndis business",
+        "transfer ndis provider",
+        "transferring insurance when selling ndis business australia",
+        "ndis provider registration tasmania"
+      ],
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://ndisbusiness-change-ownership.s3.eu-north-1.amazonaws.com/change-of-ownership-process-for-ndis/#article",
+      "headline": "Change of Ownership Process for NDIS: A Simple Guide for Buyers & Sellers",
+      "description": "Simple guide to the change of ownership process for NDIS in Australia: share sale vs asset sale, transfer NDIS provider steps, timelines, transferring insurance when selling an NDIS business, Tasmania notes, and FAQs.",
+      "mainEntityOfPage": {
+        "@id": "https://ndisbusiness-change-ownership.s3.eu-north-1.amazonaws.com/change-of-ownership-process-for-ndis/#webpage"
+      },
+      "image": [
+        "https://ndisbusiness-change-ownership.s3.eu-north-1.amazonaws.com/images/ndis-change-of-ownership-hero.jpg",
+        "https://ndisbusiness-change-ownership.s3.eu-north-1.amazonaws.com/images/change-of-ownership-ndis-process.jpg",
+        "https://ndisbusiness-change-ownership.s3.eu-north-1.amazonaws.com/images/share-sale-vs-asset-sale-ndis.jpg",
+        "https://ndisbusiness-change-ownership.s3.eu-north-1.amazonaws.com/images/tips-for-selling-ndis-practice.jpg"
+      ],
+      "datePublished": "2026-01-05",
+      "dateModified": "2026-01-05",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://ndisbusiness-change-ownership.s3.eu-north-1.amazonaws.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://ndisbusiness-change-ownership.s3.eu-north-1.amazonaws.com/#organization"
+      },
+      "inLanguage": "en",
+      "keywords": [
+        "change of ownership process",
+        "selling ndis business",
+        "sell ndis business",
+        "selling your ndis practice",
+        "transfer ndis provider",
+        "sell my ndis business",
+        "ndis business for sale",
+        "businesses for sale",
+        "transferring insurance when selling ndis business australia",
+        "ndis provider registration tasmania"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://ndisbusiness-change-ownership.s3.eu-north-1.amazonaws.com/change-of-ownership-process-for-ndis/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I sell an NDIS business like a normal business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, but the deal structure matters. Some sales are share sales (company sale), others are asset sales. The right structure depends on registration, risk, and your exit goals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to transfer NDIS provider registration to the buyer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sometimes. If the buyer purchases the company (share sale), registration often stays with the same legal entity. If it’s an asset sale, the buyer may need to register separately and meet approval steps."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does the change of ownership process for NDIS take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most smooth deals take around 6 weeks to 4 months, depending on preparation, deal structure, and any NDIS Commission review or notification requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to insurance when selling an NDIS business in Australia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Insurance usually doesn’t transfer automatically. Buyers often need new cover, and sellers may need run-off cover for past services. Always plan this early to avoid any gap."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do buyers look for in an NDIS business for sale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Clean compliance records, stable staffing, clear participant agreements, strong processes, and a smooth handover plan. Buyers also look for low key-person risk and reliable systems."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there anything special about NDIS provider registration Tasmania?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rules are national, but smaller markets can feel more personal. Relationships matter, communication spreads faster, and timing can vary depending on assessor availability and local factors."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<meta name="google-site-verification" content="-7ui85sLPhYV3sbsA2mXlTPE8RKGHSkHigJwFINuUfM" />
+  </head>
+
+<body>
+
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="brand" href="index.html">NDIS Business Guides</a>
+
+      <button class="nav__btn" id="navBtn" aria-label="Toggle menu">☰</button>
+
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="index.html">NDIS: Change Of Ownership Proceess [Setp-By-Setp]</a>
+        <a href="contact-us.html">Contact</a>
+        <div class="dropdown" id="moreDropdown">
+          <a href="javascript:void(0)" id="moreBtn">More</a>
+          <div class="dropdown__menu" aria-label="More">
+            <a href="about-us.html">About Us</a>
+            <a href="privacy-policy.html" rel="nofollow">Privacy Policy</a>
+            <a href="sitemap.html" rel="nofollow">Sitemap</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="hero" aria-label="Hero section for change of ownership process for NDIS">
+
+  <!-- Background image with accessible alt text -->
+  <div 
+    class="hero__bg" 
+    role="img" 
+    aria-label="NDIS business owners reviewing documents together during change of ownership process in Australia"
+  ></div>
+
+  <!-- Overlay -->
+  <div class="hero__overlay"></div>
+
+  <!-- Content -->
+  <div class="hero__inner">
+    <div>
+      <h1 class="hero__title">
+        Change of Ownership Process for <span class="accent">NDIS</span>:<br>
+        A Simple Guide for Buyers &amp; Sellers
+      </h1>
+
+      <div class="hero__meta">
+        <span class="pill">🇦🇺 Australia • NDIS Business: Beginner Guides</span>
+        <span class="pill">Updated: Jan 2026</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+  <main class="wrap">
+
+    <section class="grid">
+      <article class="card article">
+        <div class="card__body">
+
+          <div class="card toc-card" aria-label="Table of contents">
+            <div class="card__body">
+              <div class="card__title">Table of Contents</div>
+              <div class="toc" id="tocPrimary">
+<a href="#intro"><span>1. Introduction</span><span class="arrow">›</span></a>
+                <a href="#meaning"><span>2. What the change of ownership process means</span><span class="arrow">›</span></a>
+                <a href="#sell-or-transfer"><span>3. Can you sell an NDIS business or transfer the provider?</span><span class="arrow">›</span></a>
+                <a href="#steps"><span>4. Step-by-step change of ownership process</span><span class="arrow">›</span></a>
+                <a href="#forgot"><span>5. What most owners forget when selling</span><span class="arrow">›</span></a>
+                <a href="#insurance"><span>6. Transferring insurance in Australia</span><span class="arrow">›</span></a>
+                <a href="#timeline"><span>7. How long the process takes</span><span class="arrow">›</span></a>
+                <a href="#tasmania"><span>8. Special cases: Tasmania registration</span><span class="arrow">›</span></a>
+                <a href="#vs-other"><span>9. NDIS vs other businesses for sale</span><span class="arrow">›</span></a>
+                <a href="#final"><span>10. Final thoughts</span><span class="arrow">›</span></a>
+                <a href="#faqs"><span>11. FAQs</span><span class="arrow">›</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="kicker" style="margin-top:14px">NDIS Business Seeling Tips & Tricks</div>
+
+          <h2 class="section" id="intro">Introduction</h2>
+          <p class="lead">If you’re thinking about <strong>selling an NDIS business</strong> or buying one, the first thing you’ll hear people talk about is the <strong>change of ownership process</strong>. And honestly? That phrase alone scares a lot of people.</p>
+          <p>It sounds complicated, slow, and full of paperwork. But the truth is, once you understand how it works, it’s not as bad as it looks.</p>
+          <p>This guide is written for real people — business owners, buyers, and anyone searching for an <strong><a href="https://ndisbusinessbrokers.com.au/">NDIS business for sale</a></strong>  in Australia. No legal jargon. No fancy words. Just clear answers, like I’m explaining it to my neighbour over a coffee.</p>
+          <p>The <strong><a href="https://becomeaprovider.com.au/ndis-change-of-ownership/">change of ownership process for NDIS</a></strong>  is different from selling a normal café or retail shop. You’re not just selling a business. You’re dealing with participants, staff, compliance rules, and the NDIS Commission. That’s why many deals fail — not because the business is bad, but because the process isn’t handled the right way.</p>
+
+          <div class="quote">
+            <p style="margin:0"><strong>Quick heads-up:</strong> In this article we’ll cover whether you can sell the business outright or if you need to <strong>transfer NDIS provider</strong> registration — plus the stuff people forget (like <strong>transferring insurance when selling NDIS business Australia</strong>).</p>
+          </div>
+
+          <h2 class="section" id="meaning">What Does the Change of Ownership Process for NDIS Really Mean?</h2>
+          <p>When people hear the words <strong>change of ownership process</strong>, most of them think it means selling everything, handing over the keys, and walking away. That might be true for normal businesses, but with an NDIS business, things work a bit differently.</p>
+          <p>In simple terms, the <strong>change of ownership process for NDIS</strong> is how control of an NDIS business moves from one owner to another while staying compliant with NDIS rules. It’s not just about money changing hands. It’s about making sure participants stay supported, staff stay employed, and services continue without disruption.</p>
+          <p>Here’s the part many owners don’t realise: You’re not “selling the NDIS registration” like you’d sell furniture or equipment. The NDIS Commission doesn’t allow registrations to be freely traded. That’s why the structure of the deal matters so much when <strong>selling NDIS business</strong>.</p>
+
+          <div class="callouts">
+            <div class="callout">
+              <h4>What this process protects</h4>
+              <ul>
+                <li>Participants (no sudden service drops)</li>
+                <li>Staff (clear handover and stability)</li>
+                <li>Buyers and sellers (less risk and fewer surprises)</li>
+              </ul>
+            </div>
+            <div class="callout">
+              <h4>Why deals fail (usually)</h4>
+              <ul>
+                <li>Wrong deal structure chosen too late</li>
+                <li>Messy documents and unclear handover</li>
+                <li>Insurance gaps and poor communication</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2 class="section" id="sell-or-transfer">Can You Sell an NDIS Business or Do You Need to Transfer the NDIS Provider?</h2>
+          <p>This is one of the most common questions I hear from owners who want to <strong>sell NDIS business</strong>: “Can I just sell it like any other business, or do I need to transfer the NDIS provider?”</p>
+          <p>The short answer? Yes, you can <strong>sell an NDIS business</strong>, but <em>how</em> you sell it matters a lot. Unlike normal <strong>businesses for sale</strong>, an NDIS business is tied to strict rules. The NDIS Commission wants to make sure participants are protected at all times.</p>
+
+          <h3>Selling NDIS Business vs Selling the Company</h3>
+          <p>Some owners sell the <strong>company itself</strong> (often called a share sale). In this case, the legal entity stays the same. The NDIS provider registration stays active. Only the ownership of the company changes. This is often the fastest option and very popular when buyers want ongoing cash flow without interruption.</p>
+
+          <h3>When You Need to Transfer NDIS Provider Registration</h3>
+          <p>Other owners sell the <strong>business assets only</strong>. This includes things like participant agreements, brand name, systems, and goodwill. In this situation, the buyer applies to become an NDIS provider separately and may need to <strong>transfer NDIS provider</strong> status (or register as a new provider). This path takes longer, but sometimes it’s cleaner, especially if the seller wants a full exit.</p>
+
+          <figure class="quote" style="padding:14px 14px 10px;">
+            <p style="margin:0 0 10px"><strong>Quick comparison (simple view):</strong></p>
+            <table class="data" aria-label="Share sale vs asset sale comparison">
+              <thead>
+                <tr>
+                  <th>Deal type</th>
+                  <th>What changes</th>
+                  <th>Typical outcome</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Share sale</strong></td>
+                  <td>Company owner changes</td>
+                  <td>Registration usually stays with the same entity</td>
+                </tr>
+                <tr>
+                  <td><strong>Asset sale</strong></td>
+                  <td>Business assets move to buyer</td>
+                  <td>Buyer often needs fresh registration / approval steps</td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+
+          <p>Another big factor is insurance. When selling assets, policies usually don’t transfer automatically. This is where <strong>transferring insurance when selling NDIS business Australia</strong> becomes a serious issue. Miss this step, and both buyer and seller could be exposed to risk.</p>
+          <p>Buyers looking for an <strong>NDIS business for sale</strong> should always ask one question early: “Am I buying the company or just the business?” That single question changes the whole deal.</p>
+<!-- Image 2: Share Sale vs Asset Sale Comparison -->
+          <figure class="blog-image">
+            <img 
+              src="img/share-sale-vs-asset-sale-ndis.png" 
+              alt="Share sale vs asset sale comparison for NDIS business ownership transfer in Australia"
+              loading="lazy"
+            
+            >
+            <figcaption>
+              Comparison between share sale and asset sale when selling an NDIS business.
+            </figcaption>
+          </figure>
+          
+          <h2 class="section" id="steps">Step-by-Step Change of Ownership Process for NDIS Businesses</h2>
+          <p>Now that you know <em>how</em> an NDIS business can be sold, let’s talk about what actually happens next. Whether you’re <strong>selling NDIS business</strong> or buying one, the process usually follows the same core steps.</p>
+
+          <h3>Step 1 – Preparing for Selling Your NDIS Practice</h3>
+          <p>Before you even list your business, you need to get it ready. If you’re <strong>selling your NDIS practice</strong>, buyers will look closely at compliance history, active participants, staff contracts, insurance, and clean financials.</p>
+
+          <h3>Step 2 – Finding the Right Buyer for Your NDIS Business for Sale</h3>
+          <p>Not every buyer is a good buyer. Serious buyers understand compliance, participant care, and long-term responsibility. If you’re listing an <strong>NDIS business for sale</strong>, filtering buyers early saves time and stress.</p>
+
+          <h3>Step 3 – Agreements and Deal Structure</h3>
+          <p>Once a buyer is found, both sides agree on whether it’s a share sale or asset sale. This decision impacts timelines, approvals, and insurance. This is where the <strong>change of ownership process</strong> officially begins.</p>
+
+          <h3>Step 4 – NDIS Notification and Compliance Checks</h3>
+          <p>In many cases, the NDIS Commission must be notified of ownership changes. They may request documents or confirm that standards are still met.</p>
+
+          <h3>Step 5 – Settlement and Handover</h3>
+          <p>After approvals, settlement happens. Staff are informed, participants continue receiving care, and systems are handed over. If planned properly, this feels smooth — not scary.</p>
+
+          <div class="quote">
+            <p style="margin:0"><strong>Key idea:</strong> The change of ownership process isn’t about speed. It’s about doing it right.</p>
+          </div>
+          <!-- Image 1: Change of Ownership Process Steps -->
+  <figure class="blog-image">
+    <img 
+      src="img/change-of-ownership-ndis-process.png" 
+      alt="Change of ownership process for NDIS business showing step-by-step flow from preparation to NDIS notification"
+      loading="lazy"
+    
+    >
+    <figcaption>
+      Step-by-step overview of the change of ownership process for NDIS businesses in Australia.
+    </figcaption>
+  </figure>
+
+          <h2 class="section" id="forgot">Selling Your NDIS Practice – What Most Owners Forget</h2>
+          <p>When people think about <strong>selling your NDIS practice</strong>, they usually focus on price. But price is not what kills most deals. What usually causes problems are the small things owners forget — the boring stuff that doesn’t sound important until it suddenly is.</p>
+          <p>One big mistake owners make when <strong>selling NDIS business</strong> is assuming the buyer will “figure things out later.” Buyers want clarity. They want to know exactly what they’re taking over and how smooth the handover will be.</p>
+
+          <div class="callouts">
+            <div class="callout">
+              <h4>People (staff + participants)</h4>
+              <ul>
+                <li>Will staff stay on after settlement?</li>
+                <li>Are contracts up to date?</li>
+                <li>How will participants be informed?</li>
+              </ul>
+            </div>
+            <div class="callout">
+              <h4>Systems + records</h4>
+              <ul>
+                <li>Rosters, software, compliance files</li>
+                <li>Incident reports and reportable events</li>
+                <li>Clear handover plan and support period</li>
+              </ul>
+            </div>
+          </div>
+
+          <p>Insurance is another big one. Many sellers don’t realise that policies don’t always move with the business. This is why <strong>transferring insurance when selling NDIS business Australia</strong> must be discussed early.</p>
+          <p>Then there’s communication. NDIS deals fall apart when staff or participants hear about the sale the wrong way — or too late. A simple, calm communication plan builds trust and protects the business value.</p>
+
+          <div class="quote">
+            <p style="margin:0"><strong>Mindset shift:</strong> You’re not just selling income. You’re handing over responsibility.</p>
+          </div>
+             <!-- Image 3: Tips for Selling NDIS Practice -->
+    <figure class="blog-image">
+      <img 
+        src="img/tips-for-selling-ndis-practice.png" 
+        alt="Tips for selling your NDIS practice successfully including staff planning, insurance, and participant communication"
+        loading="lazy"
+      
+      >
+      <figcaption>
+        Key tips to follow when selling your NDIS practice successfully.
+      </figcaption>
+    </figure>
+          <h2 class="section" id="insurance">Transferring Insurance When Selling NDIS Business Australia</h2>
+          <p>Insurance is one of those topics people like to ignore… until something goes wrong. And when it comes to <strong>transferring insurance when selling NDIS business Australia</strong>, ignoring it can turn a smooth sale into a real headache.</p>
+          <p>Here’s the simple truth: Insurance usually does <strong>not</strong> automatically move from the seller to the buyer. This surprises many owners who are <strong>selling NDIS business</strong> for the first time.</p>
+
+          <div class="quote">
+            <p style="margin:0 0 10px"><strong>Simple checklist (don’t skip):</strong></p>
+            <ul style="margin:0 0 0 18px">
+              <li>Confirm which policies can continue (and which cannot)</li>
+              <li>Notify the insurer early (don’t do it at the last minute)</li>
+              <li>Avoid any “gap” between seller cover and buyer cover</li>
+              <li>Discuss run-off cover for past services (seller side)</li>
+            </ul>
+          </div>
+
+          <p>Common mistake: cancelling insurance too early. Even after settlement, claims can arise from past services. Buyers should also be careful. Never assume insurance is “included.” Always ask what’s active, when it expires, and who is responsible for claims before and after settlement.</p>
+
+          <h2 class="section" id="timeline">How Long Does the Change of Ownership Process for NDIS Take?</h2>
+          <p>This is the question everyone asks — and it’s a fair one. If you’re <strong>selling NDIS business</strong> or looking to buy one, you want to know how long your life is going to be on hold.</p>
+          <p>The honest answer? The <strong>change of ownership process for NDIS</strong> doesn’t have a fixed timeline. But it does follow patterns. In most cases, a smooth deal takes anywhere from <strong>6 weeks to 4 months</strong>.</p>
+
+          <figure class="quote" style="padding:14px 14px 10px;">
+            <p style="margin:0 0 10px"><strong>What affects timing the most:</strong></p>
+            <table class="data" aria-label="What affects change of ownership timeline">
+              <thead>
+                <tr>
+                  <th>Factor</th>
+                  <th>How it impacts the timeline</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Deal structure</td>
+                  <td>Share sales often move quicker; asset sales can take longer due to registration steps</td>
+                </tr>
+                <tr>
+                  <td>Preparation</td>
+                  <td>Clean documents and clear handover plans reduce delays</td>
+                </tr>
+                <tr>
+                  <td>Communication</td>
+                  <td>Aligned staff, insurers, accountants, and advisors keep momentum</td>
+                </tr>
+                <tr>
+                  <td>NDIS Commission</td>
+                  <td>Reviews and notifications can add time (their job is protecting participants)</td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+
+          <p>One important thing to remember: a longer timeline doesn’t mean a bad deal. It usually means the deal is being done properly.</p>
+
+          <h2 class="section" id="tasmania">Special Cases – NDIS Provider Registration Tasmania</h2>
+          <p>If your NDIS business is based in Tasmania, or you’re looking at <strong>NDIS provider registration Tasmania</strong>, there are a few extra things you should know before moving ahead with a sale.</p>
+          <p>Tasmania follows the same national NDIS rules as the rest of Australia, but in real life, smaller states work a little differently. Fewer providers, tighter communities, and closer scrutiny mean the process often feels more personal here.</p>
+
+          <div class="callouts">
+            <div class="callout">
+              <h4>What’s different in smaller markets</h4>
+              <ul>
+                <li>Higher visibility — word travels fast</li>
+                <li>Relationships matter more than “marketing”</li>
+                <li>Trust and continuity drive value</li>
+              </ul>
+            </div>
+            <div class="callout">
+              <h4>Practical advice</h4>
+              <ul>
+                <li>Plan extra time for approvals and handover</li>
+                <li>Keep communication calm and simple</li>
+                <li>Respect local partners and referral networks</li>
+              </ul>
+            </div>
+          </div>
+
+          <p>Insurance can be another area to watch. Smaller markets sometimes mean fewer insurers or stricter terms — making <strong>transferring insurance when selling NDIS business Australia</strong> even more important to address early.</p>
+
+          <h2 class="section" id="vs-other">Selling NDIS Business vs Other Businesses for Sale</h2>
+          <p>If you’ve ever sold a café, a shop, or any other small business, you might assume <strong>selling NDIS business</strong> works the same way. On paper, it looks similar. In reality, it’s very different.</p>
+          <p>With most <strong>businesses for sale</strong>, the focus is on profit, location, and systems. Once the buyer pays, the seller steps away and that’s it. NDIS doesn’t work like that.</p>
+
+          <div class="quote">
+            <p style="margin:0"><strong>NDIS is different because:</strong> you’re dealing with people, not just numbers.</p>
+          </div>
+
+          <p>Another big difference is approval. Normal businesses don’t need regulators to be notified when ownership changes. NDIS businesses often do. Insurance is also more critical. That’s why <strong>transferring insurance when selling NDIS business Australia</strong> is a bigger deal than many sellers expect.</p>
+          <p>There’s also buyer quality. Anyone can buy a café. Not everyone should buy an NDIS business. Buyers need patience, compliance awareness, and a genuine interest in care.</p>
+          <p>Another key difference is handover. When <strong>selling your NDIS practice</strong>, the seller often stays involved for a short transition period. This helps maintain trust with participants and staff.</p>
+
+          <h2 class="section" id="final">Final Thoughts on the Change of Ownership Process for NDIS</h2>
+          <p>If there’s one thing to take away from this guide, it’s this: the <strong>change of ownership process for NDIS</strong> doesn’t have to be confusing or scary. It just needs to be understood.</p>
+          <p>Whether you’re thinking about <strong>selling NDIS business</strong> or buying one, the biggest mistakes usually come from rushing or guessing.</p>
+
+          <div class="callouts">
+            <div class="callout">
+              <h4>For sellers</h4>
+              <ul>
+                <li>Preparation matters more than hype</li>
+                <li>Clear handover plans keep value high</li>
+                <li>Don’t ignore insurance and communication</li>
+              </ul>
+            </div>
+            <div class="callout">
+              <h4>For buyers</h4>
+              <ul>
+                <li>Know what you’re buying (company vs assets)</li>
+                <li>Ask about compliance and continuity early</li>
+                <li>Plan your timeline realistically</li>
+              </ul>
+            </div>
+          </div>
+
+          <p>At <strong>NDISBusinessBrokers</strong>, we believe no one should feel lost or forced to look elsewhere for answers. Everything you need to understand buying or selling an NDIS business in Australia should be simple, clear, and right in front of you.</p>
+          <p>No pressure. No confusion. Just the right information, when you need it.</p>
+
+          <h2 class="section" id="faqs">FAQs</h2>
+          <section class="faq" aria-label="Frequently Asked Questions">
+  <div class="accordion" id="faq">
+
+    <div class="qa">
+      <h3 class="faq-question" tabindex="0" aria-expanded="false">
+        Can I sell an NDIS business like a normal business?
+        <span class="arrow" aria-hidden="true">▾</span>
+      </h3>
+      <div class="a">
+        Yes, but the deal structure matters. Some sales are share sales (company sale), others are asset sales. The right structure depends on registration, risk, and your exit goals.
+      </div>
+    </div>
+
+    <div class="qa">
+      <h3 class="faq-question" tabindex="0" aria-expanded="false">
+        Do I need to transfer NDIS provider registration to the buyer?
+        <span class="arrow" aria-hidden="true">▾</span>
+      </h3>
+      <div class="a">
+        Sometimes. If the buyer purchases the company (share sale), registration often stays with the same legal entity. If it’s an asset sale, the buyer may need to register separately and meet approval steps.
+      </div>
+    </div>
+
+    <div class="qa">
+      <h3 class="faq-question" tabindex="0" aria-expanded="false">
+        How long does the change of ownership process for NDIS take?
+        <span class="arrow" aria-hidden="true">▾</span>
+      </h3>
+      <div class="a">
+        Most smooth deals take around 6 weeks to 4 months, depending on preparation, deal structure, and any NDIS Commission review or notification requirements.
+      </div>
+    </div>
+
+    <div class="qa">
+      <h3 class="faq-question" tabindex="0" aria-expanded="false">
+        What happens to insurance when selling an NDIS business in Australia?
+        <span class="arrow" aria-hidden="true">▾</span>
+      </h3>
+      <div class="a">
+        Insurance usually doesn’t transfer automatically. Buyers often need new cover, and sellers may need run-off cover for past services. Always plan this early to avoid any gap.
+      </div>
+    </div>
+
+    <div class="qa">
+      <h3 class="faq-question" tabindex="0" aria-expanded="false">
+        What do buyers look for in an NDIS business for sale?
+        <span class="arrow" aria-hidden="true">▾</span>
+      </h3>
+      <div class="a">
+        Clean compliance records, stable staffing, clear participant agreements, strong processes, and a smooth handover plan. Buyers also look for low key-person risk and reliable systems.
+      </div>
+    </div>
+
+    <div class="qa">
+      <h3 class="faq-question" tabindex="0" aria-expanded="false">
+        Is there anything special about NDIS provider registration Tasmania?
+        <span class="arrow" aria-hidden="true">▾</span>
+      </h3>
+      <div class="a">
+        Rules are national, but smaller markets can feel more personal. Relationships matter, communication spreads faster, and timing can vary depending on assessor availability and local factors.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+        </div>
+      </article>
+
+      <aside class="sidebar" aria-label="Sidebar">
+        <div class="card">
+          <div class="card__body">
+            <div class="card__title">Key Takeaways</div>
+            <ul class="takeaways">
+              <li><strong>Deal structure</strong> (share sale vs asset sale) drives the whole timeline.</li>
+              <li>Plan for <strong>6 weeks to 4 months</strong> for a smooth change of ownership process.</li>
+              <li>Don’t ignore <strong>transferring insurance when selling NDIS business Australia</strong> — gaps cause real risk.</li>
+              <li>Clear handover plans protect <strong>participants</strong>, <strong>staff</strong>, and the value of the deal.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <div class="card__body">
+            <div class="card__title">Quick Links</div>
+            <div class="related">
+              
+              <a href="#sell-or-transfer">Sell vs transfer provider (big decision)</a>
+              <a href="#steps">Step-by-step process</a>
+              <a href="#insurance">Insurance transfer checklist</a>
+              <a href="#timeline">How long it takes</a>
+              <a href="#faqs">FAQs</a>
+            </div>
+
+            <div class="cta">
+              <div class="badge">Want a faster decision?</div>
+              <p style="margin:10px 0 0">Use the checklist sections to sanity-check your budget, timeline, and risk tolerance.</p>
+              <a href="#steps">Go to Step-by-Step Process</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <div class="card__body">
+            <div class="card__title">Site Pages</div>
+            <div class="related">
+              <a href="about-us.html">About Us</a>
+              <a href="privacy-policy.html" rel="nofollow">Privacy Policy</a>
+              <a href="contact-us.html" rel="nofollow">Contact Us</a>
+              <a href="sitemap.html" rel="nofollow">Sitemap</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+  </main>
+<section class="location-map" aria-label="NDIS Business Brokers location map">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1680233.1865760786!2d145.0417412!3d-27.572242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9145850164d3fd%3A0xd09252483daaec01!2sNDIS%20Business%20Brokers%20-%20Businesses%20for%20sale!5e0!3m2!1sen!2sau!4v1736448000000"
+    width="100%"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    aria-label="Map showing the location of NDIS Business Brokers in Australia"
+  ></iframe>
+</section>
+
+
+  <footer>
+    <div class="foot">
+      <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+        <a href="index.html">NDIS: Change Of Ownership Proceess [Setp-By-Setp]</a>
+        <a href="about-us.html" rel="nofollow">About Us</a>
+        <a href="privacy-policy.html" rel="nofollow">Privacy Policy</a>
+        <a href="contact-us.html" rel="nofollow">Contact Us</a>
+        <a href="sitemap.html" rel="nofollow">Sitemap</a>
+      </div>
+
+  
+    </div>
+  </footer>
+
+
+  <script>
+    // Mobile nav toggle + dropdown
+    (function() {
+      const nav = document.querySelector('.nav');
+      const btn = document.getElementById('navBtn');
+      if (btn) btn.addEventListener('click', () => nav.classList.toggle('open'));
+
+      const drop = document.getElementById('moreDropdown');
+      const moreBtn = document.getElementById('moreBtn');
+      if (drop && moreBtn){
+        moreBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          drop.classList.toggle('open');
+        });
+        document.addEventListener('click', (e) => {
+          if (!drop.contains(e.target)) drop.classList.remove('open');
+        });
+      }
+    })();
+
+    // FAQ accordion (if present)
+    (function() {
+      const items = document.querySelectorAll('.qa');
+      if (!items.length) return;
+      items.forEach(item => {
+        const btn = item.querySelector('button');
+        btn.addEventListener('click', () => {
+          const isOpen = item.classList.toggle('open');
+          btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      });
+    })();
+
+    // Active section highlight in TOC (if present)
+    (function() {
+      const toc = document.getElementById('tocPrimary');
+      if (!toc) return;
+
+      const links = Array.from(toc.querySelectorAll('a[href^="#"]'));
+      const ids = links
+        .map(a => (a.getAttribute('href') || '').replace('#',''))
+        .filter(Boolean);
+
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      function setActive(id) {
+        links.forEach(a => {
+          const href = a.getAttribute('href') || '';
+          a.classList.toggle('active', href === '#' + id);
+        });
+      }
+
+      const obs = new IntersectionObserver((entries) => {
+        const visible = entries
+          .filter(e => e.isIntersecting)
+          .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible && visible.target && visible.target.id) setActive(visible.target.id);
+      }, { root: null, rootMargin: '-30% 0px -60% 0px', threshold: [0.05, 0.2, 0.6] });
+
+      sections.forEach(s => obs.observe(s));
+    })();
+  </script>
+
+</body>
+</html>

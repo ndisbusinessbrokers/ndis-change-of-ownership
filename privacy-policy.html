@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy: NDIS Business Guides</title>
+  <meta name="description" content="Privacy policy for NDIS Business Guides." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+
+    :root{
+      --navy:#173a56;
+      --navy-2:#0f2b42;
+      --sand:#e9ddcf;
+      --paper:#f6efe7;
+      --card:#ffffffd9;
+      --border:#d8c9b8;
+      --text:#1f1f1f;
+      --muted:#6b6b6b;
+      --accent:#e7b44b;
+      --accent-2:#c8902f;
+      --shadow: 0 18px 40px rgba(0,0,0,.12);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Kumbh Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 15% 10%, rgba(255,255,255,.45), transparent 55%),
+        radial-gradient(800px 500px at 90% 20%, rgba(255,255,255,.25), transparent 55%),
+        linear-gradient(180deg, #efe3d6 0%, #efe1d3 30%, #eadbcc 100%);
+    }
+    /* Top Nav */
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+    .nav__inner{
+      max-width:1200px;
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+    .brand{
+      color:#fff;
+      font-weight:800;
+      letter-spacing:.2px;
+      text-decoration:none;
+      font-size:15px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      max-width:480px;
+    }
+    .nav__links{margin-left:auto;display:flex;gap:14px;align-items:center}
+    .nav__links a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+      opacity:.92;
+      padding:10px 10px;
+      border-radius:10px;
+    }
+    .nav__links a:hover{background:rgba(255,255,255,.10);opacity:1}
+    .nav__btn{
+      display:none;
+      margin-left:auto;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.20);
+      color:#fff;
+      border-radius:12px;
+      padding:10px 12px;
+      font-weight:800;
+      cursor:pointer;
+    }
+    /* Dropdown */
+    .dropdown{position:relative}
+    .dropdown > a::after{content:"▾";margin-left:6px;font-size:12px;opacity:.9}
+    .dropdown__menu{
+      position:absolute;
+      right:0;
+      top:44px;
+      min-width:260px;
+      background:#fff;
+      border:1px solid rgba(0,0,0,.08);
+      border-radius:14px;
+      box-shadow: var(--shadow);
+      padding:8px;
+      display:none;
+    }
+    .dropdown__menu a{
+      display:block;
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:12px;
+      font-weight:700;
+      font-size:14px;
+    }
+    .dropdown__menu a:hover{background:rgba(23,58,86,.08)}
+    .dropdown.open .dropdown__menu{display:block}
+
+    /* Hero */
+    .hero{
+      position:relative;
+      padding:42px 0 26px;
+      overflow:hidden;
+      min-height: 520px;
+    }
+    .hero__bg{
+      position:absolute; inset:0;
+      background-size:cover;
+      background-position:center;
+      filter:saturate(1.05) contrast(1.02);
+      transform:scale(1.02);
+    }
+    .hero__overlay{
+      position:absolute; inset:0;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.58) 0%, rgba(0,0,0,.28) 45%, rgba(0,0,0,.08) 100%),
+        radial-gradient(900px 450px at 10% 30%, rgba(231,180,75,.28), transparent 60%);
+    }
+    .hero__inner{
+      position:relative;
+      max-width:1200px;
+      margin:0 auto;
+      padding:0 18px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:end;
+    }
+    .hero__title{
+      margin:0;
+      color:#fff;
+      font-size: clamp(30px, 4vw, 62px);
+      line-height:1.02;
+      letter-spacing:-.6px;
+      font-weight:900;
+      text-shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    .hero__title .accent{color:var(--accent)}
+    .hero__meta{
+      color:rgba(255,255,255,.9);
+      font-size:14px;
+      margin-top:12px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 10px;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.10);
+      border-radius:999px;
+    }
+
+    /* Main Layout */
+    .wrap{max-width:1200px;margin:0 auto;padding:0 18px}
+    .card{
+      background:var(--card);
+      border:1px solid rgba(0,0,0,.06);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      backdrop-filter: blur(6px);
+    }
+    .card__body{padding:18px}
+    .card__title{
+      margin:0 0 10px;
+      font-weight:900;
+      letter-spacing:-.2px;
+      font-size:16px;
+      color:var(--navy);
+    }
+
+    /* TOC (boxed inside article) */
+    .toc a{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:12px;
+      color:var(--text);
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+    }
+    .toc a:hover{background:rgba(23,58,86,.07)}
+    .toc a.active{background:rgba(231,180,75,.22); border:1px solid rgba(231,180,75,.45)}
+    .arrow{opacity:.55}
+
+    /* Blog grid */
+    .grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:18px;
+      align-items:start;
+    }
+    .article .card__body{padding:24px}
+    .kicker{
+      font-weight:900;
+      font-size:12px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:rgba(23,58,86,.75);
+    }
+    h2{
+      margin:16px 0 10px;
+      font-size:28px;
+      letter-spacing:-.5px;
+      color:var(--navy);
+    }
+    h3{
+      margin:22px 0 10px;
+      font-size:20px;
+      letter-spacing:-.35px;
+      color:var(--navy);
+    }
+    p{margin:0 0 14px; color:#2a2a2a; line-height:1.75}
+    ul{margin:10px 0 14px 18px; line-height:1.7}
+    .lead{font-size:16px; color: #3a3a3a}
+    .quote{
+      margin:18px 0;
+      padding:18px 18px;
+      border-radius:16px;
+      background:linear-gradient(180deg, rgba(255,255,255,.80) 0%, rgba(255,255,255,.65) 100%);
+      border:1px solid rgba(0,0,0,.06);
+      position:relative;
+    }
+    .quote::before{
+      content:"“";
+      position:absolute;
+      left:14px;
+      top:-8px;
+      font-size:54px;
+      color:rgba(23,58,86,.25);
+      font-weight:900;
+    }
+    .callouts{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin:18px 0 6px;
+    }
+    .callout{
+      border-radius:16px;
+      border:1px solid rgba(0,0,0,.06);
+      background:rgba(255,255,255,.65);
+      padding:14px 14px;
+    }
+    .callout h4{margin:0 0 6px;font-size:14px;color:var(--navy);letter-spacing:-.2px}
+    .callout ul{margin:0 0 0 18px}
+    .callout li{margin:6px 0}
+
+    /* Images inside article */
+    figure{margin:18px 0}
+    figure img{width:100%; border-radius:16px; display:block}
+    figure figcaption{margin-top:10px; color:var(--muted); font-weight:700}
+
+    /* Sidebar blocks */
+    .sidebar{position:sticky; top:84px}
+    .takeaways li{margin:10px 0}
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 12px;border-radius:14px;
+      border:1px solid rgba(0,0,0,.06);
+      background:rgba(255,255,255,.7);
+      font-weight:800;
+      color:var(--navy);
+    }
+    .related a{
+      display:block;
+      padding:10px 12px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:800;
+      color:var(--text);
+      border:1px solid rgba(0,0,0,.06);
+      background:rgba(255,255,255,.65);
+      margin-top:10px;
+    }
+    .related a:hover{background:rgba(231,180,75,.20)}
+    .cta{
+      margin-top:12px;
+      padding:14px;
+      border-radius:16px;
+      background:linear-gradient(180deg, rgba(23,58,86,.08) 0%, rgba(23,58,86,.05) 100%);
+      border:1px dashed rgba(23,58,86,.25);
+    }
+    .cta a{
+      display:inline-block;
+      margin-top:10px;
+      background: var(--accent);
+      color:#1a1a1a;
+      text-decoration:none;
+      font-weight:900;
+      padding:12px 14px;
+      border-radius:14px;
+      box-shadow: 0 10px 22px rgba(0,0,0,.12);
+    }
+    .cta a:hover{background:#f2c45f}
+
+    /* Boxed TOC card helper */
+    .toc-card{max-width:520px}
+    .toc-card .card__body{padding:16px}
+    .toc-card .card__title{margin-bottom:6px}
+
+    /* Section anchors spacing */
+    .section{scroll-margin-top:96px}
+
+    /* Form */
+    .form{
+      display:grid; gap:12px;
+      margin-top:12px;
+    }
+    .form label{font-weight:800; color:var(--navy); font-size:13px}
+    .form input, .form textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(0,0,0,.14);
+      background:rgba(255,255,255,.75);
+      font:inherit;
+      outline:none;
+    }
+    .form textarea{min-height:140px; resize:vertical}
+    .form button{
+      justify-self:start;
+      background:var(--accent);
+      border:0;
+      border-radius:14px;
+      padding:12px 14px;
+      font-weight:900;
+      cursor:pointer;
+    }
+    .form button:hover{background:#f2c45f}
+
+    /* Footer */
+    footer{
+      margin-top:24px;
+      background:#0d0d0d;
+      color:#fff;
+    }
+    footer .foot{
+      max-width:1200px;
+      margin:0 auto;
+      padding:22px 18px;
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+    }
+    footer a{color:#fff;text-decoration:underline;font-weight:800;opacity:.92}
+    .social{display:flex;gap:10px;align-items:center}
+    .icon{
+      width:42px;height:42px;border-radius:999px;
+      display:inline-flex;align-items:center;justify-content:center;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.08);
+      text-decoration:none;color:#fff;font-weight:900;
+    }
+    .icon:hover{background:rgba(231,180,75,.25)}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero__inner{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .sidebar{position:relative; top:auto}
+      .nav__links{display:none}
+      .nav__btn{display:inline-flex}
+      .nav.open .nav__links{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        margin-left:0;
+        padding:12px 0 0;
+        gap:6px;
+      }
+      .brand{max-width:100%}
+      .callouts{grid-template-columns:1fr}
+      .dropdown__menu{position:static; box-shadow:none; border-radius:14px; margin-top:8px}
+      .toc-card{max-width:100%}
+    }
+
+  </style>
+  
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://example.netlify.app/#website","url":"https://example.netlify.app/","name":"NDIS Business Guides","inLanguage":"en"},{"@type":"WebPage","@id":"https://example.netlify.app/privacy-policy.html#webpage","url":"https://example.netlify.app/privacy-policy.html","name":"Privacy Policy","description":"Privacy Policy for NDIS Business Guides, including how we handle enquiries, analytics, and data security.","isPartOf":{"@id":"https://example.netlify.app/#website"},"inLanguage":"en"}]}</script>
+</head>
+
+<body>
+
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="brand" href="index.html">NDIS Business Guides</a>
+
+      <button class="nav__btn" id="navBtn" aria-label="Toggle menu">☰</button>
+
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="index.html">Blog</a>
+        <a href="contact-us.html">Contact</a>
+        <div class="dropdown" id="moreDropdown">
+          <a href="javascript:void(0)" id="moreBtn">More</a>
+          <div class="dropdown__menu" aria-label="More">
+            <a href="about-us.html">About Us</a>
+            <a href="privacy-policy.html" rel="nofollow">Privacy Policy</a>
+            <a href="sitemap.html" rel="nofollow">Sitemap</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="hero" aria-label="Hero">
+    <div class="hero__bg" role="img" aria-label="Security and privacy photo" ></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__inner">
+      <div>
+        <h1 class="hero__title">Privacy Policy:<br> NDIS Business Guides</h1>
+        <div class="hero__meta">
+          <span class="pill">🇦🇺 Australia • NDIS</span>
+          <span class="pill">Updated: Dec 2025</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+
+    <section class="grid">
+      <article class="card article">
+        <div class="card__body">
+          <div class="kicker">Policy</div>
+          <h2 class="section" id="overview">Privacy policy overview</h2>
+          <p class="lead">We aim to collect the minimum data needed to operate the site and improve content quality.</p>
+
+          <h3>Information we may collect</h3>
+          <ul>
+            <li><strong>Basic analytics</strong> (e.g., page views, device type) to understand what people read.</li>
+            <li><strong>Contact submissions</strong> if you email or message us (name, email, message).</li>
+            <li><strong>Cookies</strong> used for essential site functionality and measurement (where applicable).</li>
+          </ul>
+
+          <h3>How we use information</h3>
+          <ul>
+            <li>To respond to enquiries.</li>
+            <li>To maintain and improve the site experience.</li>
+            <li>To understand which articles help readers most.</li>
+          </ul>
+
+          <h3>What we do not do</h3>
+          <ul>
+            <li>We do not sell personal information.</li>
+            <li>We do not publish your contact details.</li>
+            <li>We do not request sensitive NDIS participant information via the contact form.</li>
+          </ul>
+
+          <h3>Your choices</h3>
+          <ul>
+            <li>You can disable cookies in your browser (some features may be limited).</li>
+            <li>You can request deletion of messages you’ve sent via the contact page.</li>
+          </ul>
+
+          <h3>Contact</h3>
+          <p>If you have questions about this policy, contact us via <a href="contact-us.html">Contact Us</a>.</p>
+        </div>
+      </article>
+
+      <aside class="sidebar" aria-label="Sidebar">
+        <div class="card">
+          <div class="card__body">
+            <div class="card__title">Related</div>
+            <div class="related">
+              <a href="contact-us.html">Contact Us</a>
+              <a href="sitemap.html" rel="nofollow">Sitemap</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <div class="foot">
+      <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+        <a href="index.html">Blog</a>
+        <a href="about-us.html" rel="nofollow">About Us</a>
+        <a href="privacy-policy.html" rel="nofollow">Privacy Policy</a>
+        <a href="contact-us.html" rel="nofollow">Contact Us</a>
+        <a href="sitemap.html" rel="nofollow">Sitemap</a>
+      </div>
+
+      <div class="social" aria-label="Social links">
+        <a class="icon" href="#" aria-label="Facebook">f</a>
+        <a class="icon" href="#" aria-label="Twitter">𝕏</a>
+        <a class="icon" href="#" aria-label="YouTube">▶</a>
+        <a class="icon" href="#" aria-label="Instagram">◎</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    // Mobile nav toggle + dropdown
+    (function() {
+      const nav = document.querySelector('.nav');
+      const btn = document.getElementById('navBtn');
+      if (btn) btn.addEventListener('click', () => nav.classList.toggle('open'));
+
+      const drop = document.getElementById('moreDropdown');
+      const moreBtn = document.getElementById('moreBtn');
+      if (drop && moreBtn){
+        moreBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          drop.classList.toggle('open');
+        });
+        document.addEventListener('click', (e) => {
+          if (!drop.contains(e.target)) drop.classList.remove('open');
+        });
+      }
+    })();
+
+    // FAQ accordion (if present)
+    (function() {
+      const items = document.querySelectorAll('.qa');
+      if (!items.length) return;
+      items.forEach(item => {
+        const btn = item.querySelector('button');
+        btn.addEventListener('click', () => {
+          const isOpen = item.classList.toggle('open');
+          btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      });
+    })();
+
+    // Active section highlight in TOC (if present)
+    (function() {
+      const toc = document.getElementById('tocPrimary');
+      if (!toc) return;
+
+      const links = Array.from(toc.querySelectorAll('a[href^="#"]'));
+      const ids = links
+        .map(a => (a.getAttribute('href') || '').replace('#',''))
+        .filter(Boolean);
+
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      function setActive(id) {
+        links.forEach(a => {
+          const href = a.getAttribute('href') || '';
+          a.classList.toggle('active', href === '#' + id);
+        });
+      }
+
+      const obs = new IntersectionObserver((entries) => {
+        const visible = entries
+          .filter(e => e.isIntersecting)
+          .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible && visible.target && visible.target.id) setActive(visible.target.id);
+      }, { root: null, rootMargin: '-30% 0px -60% 0px', threshold: [0.05, 0.2, 0.6] });
+
+      sections.forEach(s => obs.observe(s));
+    })();
+  </script>
+
+</body>
+</html>
